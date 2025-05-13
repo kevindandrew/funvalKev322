@@ -1,0 +1,58 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #253950;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.list {
+  list-style: disc;
+  margin: 30px;
+}
+
+.card {
+  background-color: hsl(31, 34%, 25%);
+  margin: 20px auto;
+  width: 300px;
+  padding: 50px 30px 40px 10px;
+  border-radius: 12px;
+}
+
+.divisor {
+  margin: 20px;
+}
+
+.divisor2 {
+  border: solid 1px white;
+  width: 300px;
+  margin: 20px auto;
+}
+.formulario {
+  margin: 30px 20px;
+}
+
+.ul {
+  display: flex;
+  flex-direction: column;
+}
+@media (width >= 768px) {
+  body {
+    background-color: #1f6fca;
+  }
+  .ul {
+    flex-direction: row;
+    gap: 30px;
+  }
+} */

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode</title>
+    <link rel="stylesheet" href="./dark.css" />
+    <script src="./dark.js" defer></script>
+  </head>
+  <body class="flex justify-center items-center bg-sky-200 dark:bg-sky-950">
+    <main
+      class="bg-white dark:bg-gray-500 h-1/2 w-1/2 rounded-3xl flex flex-col p-8 justify-center items-center gap-1.5"
+    >
+      <img src="https://placecats.com/150/100" alt="" class="rounded-2xl" />
+      <h1 class="font-bold">The Cat</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit Lorem, ipsum
+        dolor sit amet consectetur adipisicing elit. Perspiciatis iure illo
+        distinctio iste molestias harum ipsam accusamus assumenda aperiam eius
+        recusandae excepturi dolorum nihil corporis minima inventore odio eum
+        aliquid error fugiat maxime optio quibusdam, officia repellendus.
+        Obcaecati quidem est similique veniam nihil dicta nisi aut eligendi,
+        eaque accusantium sapiente ipsum labore debitis aliquid sed? Illum
+        maiores totam possimus porro perferendis quisquam dicta eaque
+        repellendus, magni repellat dignissimos modi quis, quidem neque corrupti
+        omnis voluptas non itaque officiis hic ab veritatis. Ducimus, unde
+        repellendus rem exercitationem ex voluptatibus consequuntur iste
+        reiciendis voluptate at et sunt, deserunt nam consequatur recusandae.
+        Debitis!
+      </p>
+      <button
+        id="dark"
+        class="px-2 py-1 flex items-center rounded-full cursor-pointer bg-white absolute bottom-3 left-3"
+      >
+        <div class="hidden dark:block">
+          <img src="../resources/dark/sun-regular-24.png" alt="" />
+        </div>
+        <div class="block dark:hidden">
+          <img src="../resources/dark/moon-regular-24.png" alt="" />
+        </div>
+      </button>
+    </main>
+  </body>
+</html>

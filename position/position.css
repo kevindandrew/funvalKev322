@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*position: static es el que está por defecto*/
+
+.box1,
+.box2,
+.box3 {
+  width: 200px;
+  height: 200px;
+  border: solid 2px blue;
+}
+.item1,
+.item2,
+.item3,
+.item12,
+.item13 {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+
+/* absolute y relative  */
+
+.section {
+  border: solid 3px green;
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.box1 {
+  position: relative;
+}
+
+.item1 {
+  background-color: purple;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+.item12 {
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  background-color: yellow;
+  z-index: 3;
+}
+.item13 {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  background-color: orange;
+  z-index: 2;
+}
+
+/* fixed */
+
+.item2 {
+  position: fixed;
+  right: 30%;
+  bottom: 10%;
+}
+
+/* sticky */
+
+.item3 {
+  position: sticky;
+  left: 10%;
+  top: 10%;
+}

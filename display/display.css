@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body > a {
+  background-color: aqua;
+  display: block;
+}
+body > div {
+  background-color: rgb(24, 185, 110);
+  display: inline;
+}
+
+/* diplay:flex */
+
+.container {
+  border: solid 2px rgb(255, 0, 0);
+  width: 100%;
+  height: auto;
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.box {
+  background-color: blue;
+  border: solid 2px yellow;
+}
+.uno {
+  font-size: 2rem;
+  width: 20px;
+}
+.dos {
+  font-size: 3rem;
+  width: 100px;
+}
+.tres {
+  font-size: 4rem;
+  width: 40px;
+}

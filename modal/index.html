@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./main.js" type="module" defer></script>
+    <link rel="stylesheet" href="./output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hola mundo</h1>
+    <!-- elemento para desplegar el modal -->
+    <button id="openModal" class="bg-blue-500 text-white rounded p-2">
+      abrir modal
+    </button>
+    <button id="ricardo" class="bg-red-950 text-white p-2 rounded-lg">
+      super boton
+    </button>
+    <!-- inicio del modal -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black/50 flex items-center justify-center hidden modal-entero"
+    >
+      <!-- crear el contenido del modal -->
+      <div class="relative bg-white w-96 rounded-lg p-3">
+        <h1 class="text-2xl font-bold text-blue-800 mb-6">esto es un modal</h1>
+        <p>esto es el contenido de nuestro modal</p>
+        <button
+          id="closeModal"
+          class="bg-red-700 text-white rounded-lg p-2 mt-5"
+        >
+          salir del modal
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

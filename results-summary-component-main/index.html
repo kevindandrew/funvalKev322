@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .p {
+        color: #2e2be9;
+        color: #4e21ca;
+        color: #2421ca00;
+      }
+    </style>
+  </head>
+  <body class="font-[Hanken_Grotesk] flex justify-center items-center h-screen">
+    <main
+      class="lg:flex lg:flex-row max-w-[400px] md:max-w-[800px] lg:shadow-2xl lg:rounded-3xl"
+    >
+      <section
+        class="bg-gradient-to-b from-[#6c48fe] to-[#2e2be9] text-white flex justify-center items-center flex-col text-center pt-6 pb-10 rounded-b-4xl lg:rounded-4xl lg:w-1/2"
+      >
+        <h1>Your Result</h1>
+        <div
+          class="my-6 flex flex-col justify-center items-center bg-gradient-to-b from-[#4e21ca] to-[#2421ca00] w-[135px] h-[135px] rounded-full"
+        >
+          <span class="text-[55px] font-bold">76</span>
+          <span class="opacity-40 mt-[-8px]">of 100</span>
+        </div>
+        <h2 class="text-2xl font-semibold mb-2">Great</h2>
+        <p class="w-[70%] opacity-70">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </section>
+      <section class="px-8 py-5 lg:w-1/2">
+        <div class="w-full">
+          <h2 class="text-lg font-semibold text-[#303850]">Summary</h2>
+        </div>
+        <div class="flex flex-col px-3 py-8 gap-12">
+          <div class="flex justify-between w-full">
+            <div class="flex justify-between gap-2">
+              <img
+                src="./assets/images/icon-reaction.svg"
+                alt="icon-reaction"
+              />
+              <span class="text-[#da646a] font-bold">Reaction</span>
+            </div>
+            <div>
+              <p><strong>80</strong> / 100</p>
+            </div>
+          </div>
+          <div class="flex justify-between w-full">
+            <div class="flex justify-between gap-2">
+              <img src="./assets/images/icon-memory.svg" alt="icon-memory" />
+              <span class="text-[#e3bd7c] font-bold">Memory</span>
+            </div>
+            <div>
+              <p><strong>92</strong> / 100</p>
+            </div>
+          </div>
+          <div class="flex justify-between w-full">
+            <div class="flex justify-between gap-2">
+              <img src="./assets/images/icon-verbal.svg" alt="icon-verbal" />
+              <span class="text-[#72baa8] font-bold">Verbal</span>
+            </div>
+            <div>
+              <p><strong>61</strong> / 100</p>
+            </div>
+          </div>
+          <div class="flex justify-between w-full">
+            <div class="flex justify-between gap-2">
+              <img src="./assets/images/icon-visual.svg" alt="icon-visual" />
+              <span class="text-[#232a8c] font-bold">Visual</span>
+            </div>
+            <div>
+              <p><strong>73</strong> / 100</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <button
+            class="w-full bg-[#303b59] py-4 text-white font-bold rounded-4xl"
+          >
+            Continue
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Your Result 76 of 100 Great You scored higher than 65% of the people who
+    have taken these tests. Summary Reaction 80 / 100 Memory 92 / 100 Verbal 61
+    / 100 Visual 72 / 100 Continue
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
