@@ -1,7 +1,7 @@
 let estudiantes = [
   {
     nombre: "Kevin",
-    edad: 28,
+    edad: 15,
     pais: "Bolivia",
   },
   {
@@ -11,18 +11,18 @@ let estudiantes = [
   },
   {
     nombre: "Pedro",
-    edad: 18,
+    edad: null,
     pais: "Argentina",
   },
   {
     nombre: "Carlos",
-    edad: 22,
+    edad: null,
     pais: "Chile",
   },
   {
     nombre: "Cleto",
     edad: 50,
-    pais: "Israel",
+    pais: "Argentina",
   },
   {
     nombre: "Chente",
@@ -51,13 +51,23 @@ function traerSpinner() {
 function traerDatos() {
   contenedor.innerHTML = "";
   estudiantes.forEach((estudiante) => {
-    contenedor.innerHTML += `
+    if (estudiante.edad != null) {
+      contenedor.innerHTML += `
 <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 
 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${estudiante.nombre}</h5>
 <p class="font-normal text-gray-700 dark:text-gray-400">tiene la edad de: ${estudiante.edad} - del pais: ${estudiante.pais}</p>
 </a>
 `;
+    } else {
+      contenedor.innerHTML += `
+<a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${estudiante.nombre}</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400"> del pais: ${estudiante.pais}</p>
+</a>
+`;
+    }
   });
 }
 traerSpinner();
@@ -65,3 +75,166 @@ traerSpinner();
 setTimeout(() => {
   traerDatos();
 }, 3000);
+
+let input1 = document.querySelector("#input1");
+let input2 = document.querySelector("#input2");
+let resultado = 0;
+
+let in1 = 0;
+let in2 = 0;
+input1.addEventListener("input", function (e) {
+  resultado = resultado - in1;
+
+  if (e.target.value !== "") {
+    resultado += parseInt(e.target.value);
+    in1 = parseInt(e.target.value);
+    console.log(resultado);
+  } else {
+    in1 = 0;
+  }
+});
+
+input2.addEventListener("input", function (e) {
+  resultado = resultado - in2;
+
+  if (e.target.value !== "") {
+    resultado += parseInt(e.target.value);
+    in2 = parseInt(e.target.value);
+    console.log(resultado);
+  } else {
+    in2 = 0;
+  }
+});
+
+/* let boton322 = document.querySelector("#botonloco");
+
+boton322.addEventListener("click", function (evento) {
+  console.log(input1.value);
+});
+ */
+/* 
+let buscador = document.querySelector("#buscador");
+let edades = document.querySelector("#numeritos");
+let botoncito = document.querySelector("#botonloco");
+
+botoncito.addEventListener("click", function (evento) {
+  contenedor.innerHTML = "";
+  if (buscador.value != "" && edades.value != "") {
+    contenedor.innerHTML = "";
+    console.log(buscador.value);
+    console.log(edades.value);
+    estudiantes.forEach((estudiante) => {
+      if (
+        estudiante.nombre
+          .toLowerCase()
+          .includes(buscador.value.toLowerCase()) &&
+        estudiante.edad == edades.value
+      ) {
+        contenedor.innerHTML += `
+<a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${estudiante.nombre}</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">tiene la edad de: ${estudiante.edad} - del pais: ${estudiante.pais}</p>
+</a>
+`;
+      }
+    });
+  } else {
+    if (buscador.value == "") {
+      estudiantes.forEach((estudiante) => {
+        if (estudiante.edad == edades.value) {
+          contenedor.innerHTML += `
+<a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${estudiante.nombre}</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">tiene la edad de: ${estudiante.edad} - del pais: ${estudiante.pais}</p>
+</a>
+`;
+        }
+      });
+    } else {
+      estudiantes.forEach((estudiante) => {
+        if (
+          estudiante.nombre.toLowerCase().includes(buscador.value.toLowerCase())
+        ) {
+          contenedor.innerHTML += `
+<a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${estudiante.nombre}</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">tiene la edad de: ${estudiante.edad} - del pais: ${estudiante.pais}</p>
+</a>
+`;
+        }
+      });
+    }
+  }
+}); */
+
+/* buscador.addEventListener("input", function (e) {
+  contenedor.innerHTML = "";
+  console.log(buscador.value);
+  let busqueda = buscador.value.toLowerCase();
+  estudiantes.forEach((estudiante) => {
+    if (estudiante.nombre.toLowerCase().includes(busqueda)) {
+      contenedor.innerHTML += `
+<a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${estudiante.nombre}</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">tiene la edad de: ${estudiante.edad} - del pais: ${estudiante.pais}</p>
+</a>
+`;
+    }
+  });
+});
+ */
+
+let formulario = document.querySelector("#formulario");
+formulario.addEventListener("submit", function (e) {
+  e.preventDefault();
+  contenedor.innerHTML = "";
+  let formdata1 = new FormData(formulario);
+  let nombres = formdata1.get("buscador");
+  let age = formdata1.get("numeritos");
+  if (nombres != "" && age != "") {
+    estudiantes.forEach((estudiante) => {
+      if (
+        estudiante.nombre.toLowerCase().includes(nombres.toLowerCase()) &&
+        estudiante.edad == age
+      ) {
+        contenedor.innerHTML += `
+<a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${estudiante.nombre}</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">tiene la edad de: ${estudiante.edad} - del pais: ${estudiante.pais}</p>
+</a>
+`;
+      }
+    });
+  } else {
+    if (nombres != "") {
+      estudiantes.forEach((estudiante) => {
+        if (estudiante.nombre.toLowerCase().includes(nombres.toLowerCase())) {
+          contenedor.innerHTML += `
+<a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${estudiante.nombre}</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">tiene la edad de: ${estudiante.edad} - del pais: ${estudiante.pais}</p>
+</a>
+`;
+        }
+      });
+    } else {
+      estudiantes.forEach((estudiante) => {
+        if (estudiante.edad == age) {
+          contenedor.innerHTML += `
+<a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${estudiante.nombre}</h5>
+<p class="font-normal text-gray-700 dark:text-gray-400">tiene la edad de: ${estudiante.edad} - del pais: ${estudiante.pais}</p>
+</a>
+`;
+        }
+      });
+    }
+  }
+});
